@@ -1,0 +1,28 @@
+{
+  "name": "@deck/present",
+  "version": "1.0.3",
+  "main": "index.js",
+  "bin": {
+    "present": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "David Mark Clements"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "exec-sync": "^0.1.6",
+    "ip": "^0.3.2",
+    "portfinder": "^0.4.0",
+    "through2": "^0.6.5"
+  },
+  "readmeFilename": "Readme.md",
+  "maintainers": [
+    {
+      "name": "davidmarkclements",
+      "email": "david.clements@nearform.com"
+    }
+  ]
+}
