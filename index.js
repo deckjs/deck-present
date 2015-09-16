@@ -39,7 +39,7 @@ portfinder.getPort(function (err, port) {
           port: port,
           livereload: {
             port: lrPort
-          }  
+          }
         }
     });
 
@@ -48,7 +48,7 @@ portfinder.getPort(function (err, port) {
       .pipe(through.obj(function (obj, enc, cb) {
         if (obj && 'port' in obj) {
           if (+obj.port !== port) {
-            return cb(Error('Port mismatch, should be ' 
+            return cb(Error('Port mismatch, should be '
               + port + ', got' + obj.port));
           }
 
@@ -58,7 +58,7 @@ portfinder.getPort(function (err, port) {
         }
 
         cb(null, obj ? JSON.stringify(obj) : '\n');
-        
+
       }))
       .pipe(process.stdout);
 
