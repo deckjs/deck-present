@@ -6,8 +6,12 @@
     "present": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "standard": "standard --format"
   },
+  "pre-commit": [
+    "standard"
+  ],
   "author": {
     "name": "David Mark Clements"
   },
@@ -24,5 +28,9 @@
       "name": "davidmarkclements",
       "email": "david.clements@nearform.com"
     }
-  ]
+  ],
+  "devDependencies": {
+    "pre-commit": "1.1.1",
+    "standard": "5.3.1"
+  }
 }
