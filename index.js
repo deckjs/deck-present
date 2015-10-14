@@ -38,7 +38,7 @@ portfinder.getPort(function (err, port) {
       title: titlelize(pkg.name),
       deck: localize('deck.md'),
       images: JSON.stringify(images),
-      source: fs.existsSync(localize('source')) ? localize('source') : null,
+      code: fs.existsSync(localize('code')) ? localize('code') : null,
       skin: skin,
       connect: {
         root: 'dist',
