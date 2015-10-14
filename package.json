@@ -12,6 +12,9 @@
   "pre-commit": [
     "standard"
   ],
+  "files": [
+    "index.js"
+  ],
   "author": {
     "name": "David Mark Clements"
   },
