@@ -5,7 +5,7 @@ var localize = path.join.bind(path, path.join(__dirname, '..', '..', '..'))
 var portfinder = require('portfinder')
 var pkg = require(localize('package.json'))
 var exec = require('child_process').execSync || require('exec-sync')
-var present = require(path.join((exec('deck-path')+'').trim(), 'node_modules', '@deck', 'presenter'))
+var present = require(path.join((exec('deck-path') + '').trim(), 'node_modules', '@deck', 'presenter'))
 var through = require('through2')
 var ip = require('ip')
 var skin
