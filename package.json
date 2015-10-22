@@ -7,10 +7,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "standard --format"
+    "format": "standard --format",
+    "lint": "standard"
   },
   "pre-commit": [
-    "format"
+    "lint"
   ],
   "files": [
     "index.js"
@@ -20,7 +21,7 @@
   },
   "license": "MIT",
   "optionalDependencies": {
-    "exec-sync": "^0.1.6",
+    "exec-sync": "^0.1.6"
   },
   "dependencies": {
     "ip": "^0.3.2",
