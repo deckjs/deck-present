@@ -1,6 +1,6 @@
 {
   "name": "@deck/present",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "index.js",
   "bin": {
     "present": "./index.js"
@@ -19,8 +19,10 @@
     "name": "David Mark Clements"
   },
   "license": "MIT",
-  "dependencies": {
+  "optionalDependencies": {
     "exec-sync": "^0.1.6",
+  },
+  "dependencies": {
     "ip": "^0.3.2",
     "portfinder": "^0.4.0",
     "through2": "^0.6.5"
