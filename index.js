@@ -1,21 +1,24 @@
 #!/usr/bin/env node
+
 var path = require('path')
 var fs = require('fs')
 var localize = path.join.bind(path, path.join(__dirname, '..', '..', '..'))
 var portfinder = require('portfinder')
 var pkg = require(localize('package.json'))
 var exec = require('child_process').exec
+var through = require('through2')
+var ip = require('ip')
 
 exec('deck-path', function (err, deckPath) {
+  if (err) {
+    console.error(err)
+    return process.exit(1)
+  }
   var present = require(path.join((deckPath + '').trim(), 'node_modules', '@deck', 'presenter'))
-  var through = require('through2')
-  var ip = require('ip')
   var skin
 
   if (pkg.skin) {
-    try {
-      skin = require.resolve(pkg.skin)
-    } catch (e) {}
+    try { skin = require.resolve(pkg.skin) } catch (e) {}
   }
 
   var skinmages = path.join(path.dirname(skin), 'images')
@@ -77,5 +80,4 @@ exec('deck-path', function (err, deckPath) {
         return n.charAt(0).toUpperCase() + n.substr(1)
       }))
   }
-
 })
