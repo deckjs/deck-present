@@ -9,12 +9,12 @@ var exec = require('child_process').exec
 var through = require('through2')
 var ip = require('ip')
 
-exec('deck-path', function (err, deckPath) {
+exec('presenter-path', function (err, presenterPath) {
   if (err) {
     console.error(err)
     return process.exit(1)
   }
-  var present = require(path.join((deckPath + '').trim(), 'node_modules', '@deck', 'presenter'))
+  var present = require(presenterPath)
   var skin
 
   if (pkg.skin) {
