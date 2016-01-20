@@ -14,7 +14,7 @@ exec('presenter-path', function (err, presenterPath) {
     console.error(err)
     return process.exit(1)
   }
-  var present = require(presenterPath)
+  var present = require((presenterPath+'').trim())
   var skin
 
   if (pkg.skin) {
